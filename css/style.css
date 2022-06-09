@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    background-color: rgb(128, 247, 247);
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.recorde_game {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 50%;
+    font-size: 30px;
+    color: #00ff22;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;;
+}
+
+.container {
+    display: flex;
+    background: linear-gradient(rgb(6, 216, 6), #046111) ;
+    padding: 20px;
+    border: 1px solid black;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.recordes {
+    position: absolute;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #87CEEB;
+    width: 100%;
+    height: 260px;
+}
+
+.container input {
+    padding: 10px;
+    text-align: center;
+    outline: 0;
+    border: 0 none;
+    box-shadow: 0 0 0 0;
+    border-radius: 10rem;
+    background-color: #fff;
+}
+
+.pipe {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    right: -80px;
+    animation: pipe_animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    animation: clouds_animation 10s infinite linear;
+}
+
+@keyframes pipe_animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds_animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
